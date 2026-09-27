@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+    <loc>https://kaban.asia/</loc>
+</url>
+<?php foreach ($machines as $machine): ?>
+<url>
+    <loc>https://kaban.asia/machine.php?slug=<?php echo $machine['slug']; ?></loc>
+</url>
+<?php endforeach; ?>
+</urlset>

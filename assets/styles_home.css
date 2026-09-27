@@ -1,0 +1,471 @@
+/* ===============================
+   HERO SECTION
+=============================== */
+
+.hero-section {
+    width: 100%;
+    position: relative;
+}
+
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .6s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0.35) 50%,
+        rgba(0,0,0,0.15) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 520px;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+}
+
+/* стрелки */
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.45);
+    border: none;
+    color: #fff;
+    font-size: 38px;
+    width: 48px;
+    height: 64px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hero-arrow.prev { left: 12px; }
+.hero-arrow.next { right: 12px; }
+
+.hero-arrow:hover {
+    background: rgba(0,0,0,0.65);
+}
+
+/* точки */
+.hero-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.hero-dot.active {
+    background: #d91522;
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .hero-slider {
+        min-height: 420px;
+    }
+}
+
+
+/* ===============================
+   POPULAR CATEGORIES
+=============================== */
+
+.popular-categories .category-card {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.popular-categories .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.popular-categories .card-image-wrapper {
+    min-height: 160px;
+}
+
+.popular-categories .card-title {
+    font-size: 16px;
+}
+
+.popular-categories .card-text {
+    font-size: 13px;
+    color: #555;
+}
+
+
+
+/* ===============================
+   WHY KABAN
+=============================== */
+
+.why-kaban {
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.why-item {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 18px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.why-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #d91522;
+    line-height: 1;
+}
+
+.why-number .plus {
+    font-size: 28px;
+}
+
+.why-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.why-text {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* адаптив */
+@media (max-width: 600px) {
+    .why-number {
+        font-size: 36px;
+    }
+}
+
+
+/* ===============================
+   TRUST BLOCK
+=============================== */
+
+.trust-block {
+    background: #ffffff;
+    padding: 50px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    margin-top: 30px;
+}
+
+.trust-item {
+    text-align: center;
+    padding: 28px 18px;
+    border-radius: 16px;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+}
+
+.trust-number {
+    font-size: 44px;
+    font-weight: 800;
+    color: #d91522;
+    line-height: 1;
+}
+
+.trust-number .plus {
+    font-size: 26px;
+}
+
+.trust-text {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* адаптив */
+@media (max-width: 600px) {
+    .trust-number {
+        font-size: 36px;
+    }
+}
+
+
+
+/* ===============================
+   NARROW PROMO BANNERS
+=============================== */
+
+.narrow-banners {
+    padding: 40px 0;
+}
+
+.narrow-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.narrow-banner {
+    position: relative;
+    min-height: 200px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.narrow-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.6) 100%
+    );
+}
+
+.narrow-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 420px;
+}
+
+.narrow-content h3 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.narrow-content p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+.narrow-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #d91522;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* hover */
+.narrow-banner:hover .narrow-btn {
+    background: #b6121c;
+}
+
+/* адаптив */
+@media (max-width: 900px) {
+    .narrow-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ===============================
+   POPULAR MACHINES
+=============================== */
+
+.popular-machines .machine-card {
+    border: 1px solid #f2f2f2;
+}
+
+.popular-machines .machine-card:hover {
+    border-color: #ffd4d6;
+}
+
+
+/* ===============================
+   PROMO STRIP
+=============================== */
+
+.promo-strip {
+    background: linear-gradient(90deg, #d91522 0%, #b5121c 100%);
+    color: #ffffff;
+    padding: 28px 0;
+    margin: 50px 0;
+}
+
+.promo-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.promo-text h3 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.promo-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffecec;
+    max-width: 520px;
+}
+
+.promo-action {
+    flex-shrink: 0;
+}
+
+.promo-btn {
+    background: #ffffff;
+    color: #d91522;
+}
+
+.promo-btn:hover {
+    background: #ffecee;
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+    .promo-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo-text h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* ===============================
+   LIVE PRODUCTION
+=============================== */
+
+.live-production {
+    background: #ffffff;
+    padding: 50px 0;
+}
+
+.production-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+    margin-top: 30px;
+}
+
+.production-media {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+/* видео 16:9 */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.production-info h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.production-info .feature-list {
+    margin: 16px 0;
+    padding-left: 18px;
+}
+
+.production-info .feature-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* адаптив */
+@media (max-width: 900px) {
+    .production-grid {
+        grid-template-columns: 1fr;
+    }
+}
